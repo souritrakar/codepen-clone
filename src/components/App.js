@@ -3,7 +3,7 @@ import Editor from "./Editor";
 import useLocalStorage from "./hooks/useLocalStorage";
 import {Navbar, Container, NavDropdown, Nav} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import sandbox from "./sandbox";
 function App() {
 
   const [html, setHtml] = useLocalStorage('html', '')
@@ -51,7 +51,7 @@ function App() {
       <iframe 
       srcDoc={renderedContent}
       title="output"
-      sandbox="allow-scripts allow-modals"
+      sandbox={sandbox}
       frameBorder="0"
       width="100%"
       height="100%"
